@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>v-if for show</title>
+    <script src="./vue.js"></script>
+</head>
+<body>
+    <div id = "root">
+      <div v-show="show">hello world</div>
+      <button @click="aaa">toggle</button>
+      <ul>
+          <li v-for="item of list2" >{{item}}</li>
+      </ul>
+    </div>
+    
+
+    <script>
+    new Vue({
+        el : "#root",
+        data:{
+             show:false,
+             list2:[1,2,1]
+        },
+
+        methods : {
+            aaa:function(){
+                this.show = !this.show
+            }
+        }
+
+
+    })
+    </script>
+
+</body>
+</html>
